@@ -33,6 +33,9 @@ $ npm install
 $ npm run dev
 ```
 
+## [API ](https://cn.vuejs.org/v2/guide/index.html)  
+
+
 ## compile lib   
 ```bash
 # vuex
@@ -42,7 +45,7 @@ npm install vue-router --save
 ```  
 
 ## Use [Vue-Router](https://router.vuejs.org/zh-cn/installation.html)    
-```
+```javascript
 // main.js
 // 导入VueRouter
 import VueRouter from 'vue-router'  
