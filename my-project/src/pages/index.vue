@@ -18,6 +18,11 @@
     	
       <div class="index-left-block">
         <h2>最新消息</h2>
+        <ul>
+          <li v-for="(item, index) in newsList">
+            <a :href="item.url" class="new-item" v-if="index < 5">{{ item.title }}</a>
+          </li>
+        </ul>
       </div>
     </div>
 
@@ -30,7 +35,7 @@
           <p> {{ item.description }}</p>
           <div class="index-board-button">
             <a class="button">立即购买</a>
-          </div>
+          </div>          
         </div>         
        </div>
     </div>
@@ -39,9 +44,17 @@
 
 <script>
 export default {
-  name: 'hello',
+  created () {
+    this.$http.get('/api/movie/top250')
+    .then((res) => {
+      this.newsList = res.body.subjects
+    }, (err) => {
+      console.log(err)
+    })
+  },   
   data () {
     return {
+      newsList: [],
       boardList: [
         {
           title: '开放产品',
