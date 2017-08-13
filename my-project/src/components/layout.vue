@@ -10,7 +10,7 @@
             <li>注册</li>
             <li class="nav-pile">|</li>
             <li>关于</li>
-          </ul>
+          </ul>        
         </div>
       </div>
     </div>  
