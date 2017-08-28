@@ -2,7 +2,9 @@
   <div class="hello">
     <div class="app-head">
       <div class="app-head-inner">
-        <img src="../assets/logo.png" class="head-logo">
+        <router-link :to="{path: '/'}">
+          <img src="../assets/logo.png" class="head-logo">
+        </router-link>
         <div class="head-nav">
           <ul class="nav-list">
             <li> {{ username }}</li>
